@@ -1,0 +1,21 @@
+###############
+#   Configs   #
+###############
+config.modules=Modules
+config.tconstruct=Tinker's Construct
+
+#################
+#   Materials   #
+#################
+material.tallow.name=Tallow
+material.concentrated_hellfire.name=Hellfire
+material.diamond.name=Diamond
+material.soulsteel.name=Soulforged Steel
+
+##############
+#   Traits   #
+##############
+modifier.buttery.name=Buttery
+modifier.buttery.desc=Buttery, finger-licking good~ \n§rWho needs durability when you've got speed?
+modifier.infernal.name=Infernal
+modifier.infernal.desc=Infused with the soul of a blaze. \n§rYou have a small chance to light yourself on fire!

@@ -1,0 +1,75 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url = "http://files.minecraftforge.net/maven" }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+version = modVersion
+group = modGroup
+archivesBaseName = modBaseName
+
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+minecraft {
+    version = "1.12.2-14.23.4.2707"
+    runDir = "run"
+    mappings = "snapshot_20171003"
+}
+
+repositories {
+    maven{
+        name 'CraftTweaker/Reskillable'
+        url 'http://maven.blamejared.com'
+    }
+    maven{
+        name 'JEI'
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+    maven{
+        name = 'Tinker'
+        url "http://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        name = 'Waila'
+        url 'https://tehnut.info/maven'
+    }
+    maven {
+        name = 'MCMP'
+        url "http://maven.amadornes.com/"
+    }
+}
+
+dependencies {
+    deobfCompile "codersafterdark.reskillable:Reskillable:1.12.2-1.6.0-SNAPSHOT.68"
+    deobfCompile "MCMultiPart2:MCMultiPart:2.5.1"
+    deobfCompile "betterwithmods:BetterWithMods:1.12-2.1.9-486"
+    deobfCompile "CraftTweaker2:CraftTweaker2-MC1120-Main:1.12-${crafttweaker_version}"
+    deobfCompile "CraftTweaker2:CraftTweaker2-API:1.12-${crafttweaker_version}"
+    deobfCompile "CraftTweaker2:ZenScript:1.12-${crafttweaker_version}"
+    deobfCompile "mcp.mobius.waila:Hwyla:${hwyla_version}"
+    deobfCompile "mezz.jei:jei_1.12.2:4.8.5.144"
+    deobfCompile "slimeknights:TConstruct:${minecraft_version}-${tinkers_version}"
+    deobfCompile "slimeknights.mantle:Mantle:${mantle_minecraft_version}-${mantle_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
