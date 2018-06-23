@@ -4,6 +4,7 @@ import crafttweaker.CraftTweakerAPI;
 import crafttweaker.IAction;
 import lanse505.resurgancetweaks.proxies.CommonProxy;
 import lanse505.resurgancetweaks.utils.Constants;
+import lanse505.resurgancetweaks.utils.commands.ResurganceCommandTree;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -46,5 +47,6 @@ public class ResurganceTweaks {
     @EventHandler
     public void serverStart(FMLServerStartingEvent event) {
         proxy.serverStart(event);
+        event.registerServerCommand(new ResurganceCommandTree());
     }
 }

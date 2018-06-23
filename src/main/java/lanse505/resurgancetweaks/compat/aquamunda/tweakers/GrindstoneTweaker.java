@@ -13,7 +13,6 @@ import net.minecraft.item.ItemStack;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
-@ModOnly("aquamunda")
 @ZenClass("mods.resurgancetweaks.Grindstone")
 @ZenRegister
 public class GrindstoneTweaker {

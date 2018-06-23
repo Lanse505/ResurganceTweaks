@@ -14,7 +14,6 @@ import stanhebben.zenscript.annotations.Optional;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
-@ModOnly("aquamunda")
 @ZenClass("mods.resurgancetweaks.Cooker")
 @ZenRegister
 public class CookerTweaker {

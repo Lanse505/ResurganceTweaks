@@ -13,8 +13,7 @@ import net.minecraft.item.ItemStack;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
-@ModOnly("aquamunda")
-@ZenClass("mods.resurgancetweaker.CuttingBoard")
+@ZenClass("mods.resurgancetweaks.CuttingBoard")
 @ZenRegister
 public class CuttingBoardTweaker {
     @ZenMethod

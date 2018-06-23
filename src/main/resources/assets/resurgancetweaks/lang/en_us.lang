@@ -1,3 +1,9 @@
+##############
+#  Commands  #
+##############
+resurgancetweaks.command.usage=/resurgance subcommand
+resurgancetweaks.command.mastercommand.usage=/resurgance AllYourBaseAreBelongToUs
+
 ###############
 #   Configs   #
 ###############
